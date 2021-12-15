@@ -1,0 +1,195 @@
+/* main variables  */
+:root {
+    --main-color:;
+    --secondary-color:;
+    --top-padding:100px;
+    --bottom-padding:100px;
+}
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+/* global rules  */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /* font-family: 'Gochi Hand', cursive;; */
+    font-family: 'Raleway', sans-serif;
+}
+ul {
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: burlywood; */
+}
+/* under this size the container take full width of screen  from (0 - 767)px*/
+/* samll screen  from (768 - 991) px*/
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* medium screen  from (992-1199)px*/
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* large screen from (1200px) to larger */
+@media (min-width:1200px) {
+    .container {
+        width:1170px;
+    }
+}
+/* ::::::::::::::::::::::::::::::::::::  */
+/* statr header part  */
+header {
+    
+}
+header .container {
+
+}
+/* navegation bar (part-one) */
+header .part-one {
+    
+}
+header .part-one nav {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    /* z-index: 1; */
+}
+.logo img {
+    height: 100px;
+}
+header .part-one nav ul.main {
+    display: flex;
+}
+header .part-one nav ul.main li {
+    padding: 40px 30px 40px 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+header .part-one nav ul.main li a {
+    text-decoration: none;
+}
+header .part-one nav ul.main li a:visited {
+    color: green;
+}
+header .part-one nav ul.main li:hover {
+    background-color: rgba(100, 237, 157, 0.3);
+}
+header .part-one nav ul.main li .line {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(255, 102, 0.5);
+    top: 0;
+    left: -200px;
+    transition: 0.5s all;
+}
+@keyframes move-line {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 0px;
+    }
+}
+header .part-one nav ul.main li:hover .line {
+    animation: move-line 0.5s;
+    animation-fill-mode: forwards;
+}
+/* h1 p img part (part-two) */
+header .part-two {
+    position: relative;
+}
+header .part-two .h1-p-img {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+header .part-two .h1-p-img h1 {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2.8em;
+}
+header .part-two .h1-p-img p {
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+@keyframes move-top-down1 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+header .part-two .h1-p-img img {
+    width: 500px;
+    animation-name: move-top-down1;
+    animation-duration: 3s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-direction: alternate;
+}
+header .part-two::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 230, 140, 0.404);
+    transform-origin: left center;
+    transform: skewY(-10deg);
+}
+/* part three  */
+header .part-three {
+
+}
+header .part-three .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+@keyframes move-top-down2 {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+header .part-three .container i {
+    color: rgba(102, 161, 67, 0.753);
+    font-size: 50px;
+        animation-name: move-top-down2;
+    animation-duration: 0.3s;
+    animation-timing-function:ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode:both;
+    animation-direction: alternate;
+}
+
+
+
+
+/* end header part  */
+
