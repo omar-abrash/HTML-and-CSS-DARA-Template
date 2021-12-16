@@ -114,9 +114,10 @@ header .part-one nav ul.main li:hover .line {
 @media (max-width:768px) {
     header .part-one nav ul.main li {
         padding: 20px 5px 20px 5px;
+        margin: 0 5px 0 5px;
         font-size: 12px;
         border: 1px solid green;
-        border-radius: 10%;
+        border-radius: 20%;
     }
 }
 /* .other-links img {
@@ -130,7 +131,7 @@ header .part-one nav ul.main li:hover .line {
 /* h1 p img part (part-two) */
 header .part-two {
     position: relative;
-    min-height: calc(100vh - 162px);
+    min-height: calc(100vh - 104.391px - 50px);
 }
 header .part-two .h1-p-img {
     padding-top: 200px;
@@ -179,13 +180,16 @@ header .part-two::before {
     transform: skewY(-15deg);
 }
 @media (max-width:1200px) {
+        header .part-two {
+        min-height: calc(100vh - 104.391px - 50px);
+    }
     header .part-two .h1-p-img h1 {
         font-size: 2em;
     }
 }
 @media (max-width:992px) {
     header .part-two {
-        min-height: calc(100vh - 260px);
+        min-height: calc(100vh - 207.391px - 50px);
     }
     header .part-two .h1-p-img h1 {
         font-size: 1.7em;
@@ -196,14 +200,14 @@ header .part-two::before {
 }
 @media (max-width:768px) {
     header .part-two {
-        min-height: calc(100vh - 250px);
+        min-height: calc(100vh - 160.188px - 50px);
     }
     header .part-two .h1-p-img {
         flex-direction: column;
         align-items: center;
     }
     header .part-two .h1-p {
-        margin-top: -100px;
+        margin-top: -150px;
         margin-bottom: 30px;
         text-align: center;
     }
