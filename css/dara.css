@@ -1,7 +1,7 @@
 /* main variables  */
 :root {
-    --main-color:;
-    --secondary-color:;
+    /* --main-color:; */
+    /* --secondary-color:; */
     --top-padding:100px;
     --bottom-padding:100px;
 }
@@ -91,32 +91,46 @@ header .part-one nav ul.main li a:visited {
     color: green;
 }
 header .part-one nav ul.main li:hover {
-    background-color: rgba(100, 237, 157, 0.3);
+    background-color: rgba(149, 228, 76, 0.3);
 }
 header .part-one nav ul.main li .line {
     position: absolute;
     width: 100%;
     height: 5px;
-    background-color: rgb(255, 102, 0.5);
+    background-color: rgb(52, 212, 65);
     top: 0;
-    left: -200px;
+    left: -100%;
     transition: 0.5s all;
 }
-@keyframes move-line {
-    from {
-        left: -200px;
-    }
-    to {
-        left: 0px;
-    }
-}
 header .part-one nav ul.main li:hover .line {
-    animation: move-line 0.5s;
-    animation-fill-mode: forwards;
+    left: 0;
 }
+@media (max-width:992px) {
+    header .part-one nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:768px) {
+    header .part-one nav ul.main li {
+        padding: 20px 5px 20px 5px;
+        font-size: 12px;
+        border: 1px solid green;
+        border-radius: 10%;
+    }
+}
+/* .other-links img {
+    width: 200px;
+} 
+.other-links {
+    position: relative;
+    display: flex;
+    z-index: 2;
+}  */
 /* h1 p img part (part-two) */
 header .part-two {
     position: relative;
+    min-height: calc(100vh - 162px);
 }
 header .part-two .h1-p-img {
     padding-top: 200px;
@@ -124,6 +138,7 @@ header .part-two .h1-p-img {
     justify-content: space-between;
     position: relative;
 }
+
 header .part-two .h1-p-img h1 {
     font-family: 'Gochi Hand', cursive;
     font-size: 2.8em;
@@ -149,6 +164,10 @@ header .part-two .h1-p-img img {
     animation-iteration-count: infinite;
     animation-fill-mode:both;
     animation-direction: alternate;
+    cursor: pointer;
+}
+header .part-two .h1-p-img img:hover {
+    animation-play-state: paused;
 }
 header .part-two::before {
     position: absolute;
@@ -157,17 +176,49 @@ header .part-two::before {
     height: 100%;
     background-color: rgba(240, 230, 140, 0.404);
     transform-origin: left center;
-    transform: skewY(-10deg);
+    transform: skewY(-15deg);
+}
+@media (max-width:1200px) {
+    header .part-two .h1-p-img h1 {
+        font-size: 2em;
+    }
+}
+@media (max-width:992px) {
+    header .part-two {
+        min-height: calc(100vh - 260px);
+    }
+    header .part-two .h1-p-img h1 {
+        font-size: 1.7em;
+    }
+    header .part-two .h1-p-img img {
+        width: 400px;
+    }
+}
+@media (max-width:768px) {
+    header .part-two {
+        min-height: calc(100vh - 250px);
+    }
+    header .part-two .h1-p-img {
+        flex-direction: column;
+        align-items: center;
+    }
+    header .part-two .h1-p {
+        margin-top: -100px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    header .part-two .h1-p-img img {
+        width: 250px;
+    }
 }
 /* part three  */
 header .part-three {
-
+    
 }
 header .part-three .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
 }
 @keyframes move-top-down2 {
     0% {
@@ -176,20 +227,20 @@ header .part-three .container {
     100% {
         transform: translateY(-10px);
     }
-}
+} 
 header .part-three .container i {
-    color: rgba(102, 161, 67, 0.753);
+    color: rgba(102, 161, 67, 0.8);
     font-size: 50px;
-        animation-name: move-top-down2;
+    animation-name: move-top-down2;
     animation-duration: 0.3s;
     animation-timing-function:ease-out;
     animation-iteration-count: infinite;
     animation-fill-mode:both;
     animation-direction: alternate;
 }
-
-
-
-
+header .part-three .container i:hover {
+    animation-duration: 0.1s;
+    color: rgba(102, 161, 67);
+}
 /* end header part  */
 
