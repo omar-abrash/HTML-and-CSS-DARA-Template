@@ -334,6 +334,7 @@ header .part-three .container i:hover {
     margin-bottom: 50px;
     border-radius: 5%;
     box-shadow: 1px 1px 10px silver;
+    cursor: pointer;
     position: relative;
     transition: 0.3s all;
 }
@@ -393,11 +394,13 @@ header .part-three .container i:hover {
 }
 @media (max-width:768px) {
     .about-us .container ul {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     .about-us .container ul li {
         width: calc(100% - 100px);
         min-width: 200px;
+        max-width: 300px;
     }
 }
 /* end about us section  */
